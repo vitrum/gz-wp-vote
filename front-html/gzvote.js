@@ -18,14 +18,12 @@
  * ========================================================== */
  
 !function( $ ) {
-	
-  "use strict"
 
  /* BUTTON PUBLIC CLASS DEFINITION
   * ============================== */
 	$(".voteitem a").live('click', function() {
-		jQuery('#eventListPart').show();
-		jQuery('#productListPart').hide();
+		//alert("show statues!");
+		$(".voteresult").show();
 	});
 
 	
