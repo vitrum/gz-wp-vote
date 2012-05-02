@@ -17,32 +17,51 @@
  * limitations under the License.
  * ========================================================== */
  
-!function( $ ) {
+//set up API
+var JSON;
+if (!JSON) {
+    JSON = {};
+}
+var eventtimes = null
+, url = 'vote.json' ;
 
- /* BUTTON PUBLIC CLASS DEFINITION
-  * ============================== */
-
-	$(".voteitem a").live('click', function() {
-		//alert("show statues!");
-		$(".voteresult").show();
+//post vote
+function postVote(voteInfo) {
+	$(".voteresult").show();
+	
+	var postdate = voteInfo;
+	var request = jQuery.ajax({
+	  type: "POST",
+	  url: url,
+	  data: postdate
+	});
+	request.done(function(msg) {
+		var eventtimes = null;
 		eventtimes = setTimeout(function(){
 			$(".loading").hide();
 			$(".resultbox").show();
-		},500);
+		},300);
+	});
 
+}
+
+//main fuction
+!function( $ ) {
+ /* BUTTON PUBLIC CLASS DEFINITION
+  * ============================== */
+	$(".voteitem a").live('click', function() {
+		var linkInfo = $(this).attr("data-ref");
+		if (linkInfo !== ""){
+			postVote(linkInfo);
+		}
 	});
 	$(".voteitem a").live('hover', function() {
 		var linkInfo = $(this).attr("data-ref")
 		,$this = $(this)
 		,$linkItem = $this.parents(".voteitem")
 		,$allItem = $(".voteitem");
-		
 		$linkItem.addClass("blue");
 		$allItem.addClass("notfuct");
 		$linkItem.removeClass("notfuct");
-		/*$allMarkItem.show();
-		$thisMarkItem.hide();*/
-		
 	});
-	
 }( window.jQuery );

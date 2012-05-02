@@ -30,7 +30,7 @@ a { outline:none; text-decoration:none;  }
 /*==gz wp vote==*/
 body { padding:20px 0;}
 .hide { display: none;}
-.postbox { margin: 0 auto; width:930px; height:460px; 
+.gzvotebox { margin: 0 auto; width:930px; height:460px; 
 	box-shadow: -3px -3px 10px 2px rgba(0,0,0,.3) inset,
 	0 0 0 1px rgba(0,0,0,.5),
 	2px 2px 10px rgba(0,0,0,.6);
@@ -38,40 +38,78 @@ body { padding:20px 0;}
 	position:relative; 
 	background:url(gzvote-bg.jpg) center 0 ;
  }
-.postvotebox { padding: 0 25px; position: relative;width:870px; height:460px; color:#fff;}
-.postvotebox .votemark { width:100%; position: absolute; top:28px; font-size:46px; line-height:46px; padding-left:8px; font-weight:bold; }
-.postvotebox .votedate { position: absolute; right:20px; top:55px; font-size:22px;line-height:22px; width:200px; text-align:right;}
-.postvotebox .votetitle { position: absolute;  top:110px; font-size:22px; line-height:48px; padding-left:14px; text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
-.postvotebox .votenav { position: absolute; width:208px; height:40px; border-radius: 0 0 8px 8px; background:#fff100; top:-1px; right:14px; text-align:right; 
+.gzvotebox .postvotebox { padding: 0 25px; position: relative;width:870px; height:460px; color:#fff;}
+.gzvotebox .postvotebox .votemark { width:100%; position: absolute; top:28px; font-size:46px; line-height:46px; padding-left:8px; font-weight:bold; }
+.gzvotebox .postvotebox .votedate { position: absolute; right:20px; top:55px; font-size:22px;line-height:22px; width:200px; text-align:right;}
+.gzvotebox .postvotebox .votetitle { position: absolute;  top:110px; font-size:22px; line-height:48px; padding-left:14px; text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotebox .postvotebox .votenav { position: absolute; width:208px; height:40px; border-radius: 0 0 8px 8px; background:#fff100; top:-1px; right:14px; text-align:right; 
 line-height:40px; font-size:24px; padding-right:10px;
 box-shadow: 2px 2px 5px rgba(0,0,0,.4);
 }
-.postvotebox .votebody { clear: both; position: absolute; width:900px; height:300px; top:160px;  }
-.voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px; position: relative;}
-.voteitem + .voteitem { margin: 0;}
-.voteitem a { width:433px; height:260px; display: block;}
-.itemname { font-size:25px; line-height:60px; color:#fff; padding-left:20px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
-.voteitem .style01 { border-radius: 5px; width:433px; height:214px;}
-
-
-.voteresult { width:876px; height:359px; position: relative;}
-.resultbox, .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
-	border-radius: 5px;
-	background: #111;
-	opacity: 0.9;
-	-moz-opacity: 0.9;
-	filter:alpha(opacity=90);
-	color: #FFF;
-	z-index:999;
+.gzvotebox .postvotebox .votebody { clear: both; position: absolute; width:900px; height:300px; top:160px;  }
+.gzvotebox .voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px; position: relative;}
+.gzvotebox .voteitem + .gzvotebox .voteitem { margin: 0;}
+.gzvotebox .voteitem a { width:433px; height:260px; display: block;}
+.gzvotebox .itemname { font-size:25px; line-height:60px; color:#fff; padding-left:20px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotebox .voteitem .style01 { border-radius: 5px; width:433px; height:214px;}
+.gzvotebox .voteresult { width:876px; height:359px; position: relative;}
+.gzvotebox .resultbox, .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
+	border-radius: 5px;	background: #111; color: #FFF; z-index:999;
+	opacity: 0.9;	-moz-opacity: 0.9;	filter:alpha(opacity=90);
 }
-.loading { line-height:106px;text-align:center; }
-.resultbox .resulinfo { display: block;  font-size: 22px; line-height:22px; width:111px; text-align: center; font-weight:bold;}
-.resultbox .title { padding: 20px 0 0; }
-.resultbox .left , .resultbox .right { float: left; padding: 20px 0 0;}
-.resultbox .right { }
-.resultbox .winner { }
-.note { color: #fff100; }
-.blur {}
-.mark {  display:none; background: #ddd;width:433px; height:214px; position: absolute; z-index:9; pointer-events: none; top:0px;}
-.notfuct { 	-webkit-filter: contrast(30%);-webkit-filter: blur(2px); -webkit-filter: sepia();}
-.notfuct .mark { display:block; opacity: 0.6;	-moz-opacity: 0.6;	filter:alpha(opacity=60); border-radius: 5px;}
+.gzvotebox .loading { line-height:106px;text-align:center; }
+.gzvotebox .resultbox .resulinfo { display: block;  font-size: 22px; line-height:22px; width:111px; text-align: center; font-weight:bold;}
+.gzvotebox .resultbox .title { padding: 20px 0 0; }
+.gzvotebox .resultbox .left , .resultbox .right { float: left; padding: 20px 0 0;}
+.gzvotebox .resultbox .right { }
+.gzvotebox .resultbox .winner { }
+.gzvotebox .note { color: #fff100; }
+.gzvotebox .blur { }
+.gzvotebox .mark {  display:none; background: #ddd;width:433px; height:214px; position: absolute; z-index:9; pointer-events: none; top:0px; }
+.gzvotebox .notfuct { -webkit-filter: contrast(30%);-webkit-filter: blur(2px); -webkit-filter: sepia();}
+.gzvotebox .notfuct .mark { display:block; opacity: 0.6;	-moz-opacity: 0.6;	filter:alpha(opacity=60); border-radius: 5px;
+	background:-webkit-gradient(linear,left top,left bottom,from(#DDDDDD),to(#efefef));
+	background:-moz-linear-gradient(center bottom,#DDDDDD,#efefef);
+}
+
+.gzvotetopbox { margin: 0 auto; width:930px; height:460px; 
+	box-shadow: -3px -3px 10px 2px rgba(0,0,0,.3) inset,
+	0 0 0 1px rgba(0,0,0,.5),
+	2px 2px 10px rgba(0,0,0,.6);
+	border-radius: 5px;
+	position:relative; 
+	background:url(gzvote-bg.jpg) center 0 ;
+ }
+.gzvotetopbox .postvotebox { padding: 0 25px; position: relative;width:870px; height:460px; color:#fff;}
+.gzvotetopbox .postvotebox .votemark { width:100%; position: absolute; top:28px; font-size:46px; line-height:46px; padding-left:8px; font-weight:bold; }
+.gzvotetopbox .postvotebox .votedate { position: absolute; right:20px; top:55px; font-size:22px;line-height:22px; width:200px; text-align:right;}
+.gzvotetopbox .postvotebox .votetitle { position: absolute;  top:110px; font-size:22px; line-height:48px; padding-left:14px; text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotetopbox .postvotebox .votenav { position: absolute; width:208px; height:40px; border-radius: 0 0 8px 8px; background:#fff100; top:-1px; right:14px; text-align:right; 
+line-height:40px; font-size:24px; padding-right:10px;
+box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+}
+.gzvotetopbox .postvotebox .votebody { clear: both; position: absolute; width:900px; height:300px; top:160px;  }
+.gzvotetopbox .voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px; position: relative;}
+.gzvotetopbox .voteitem + .gzvotebox .voteitem { margin: 0;}
+.gzvotetopbox .voteitem a { width:433px; height:260px; display: block;}
+.gzvotetopbox .itemname { font-size:25px; line-height:60px; color:#fff; padding-left:20px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotetopbox .voteitem .style01 { border-radius: 5px; width:433px; height:214px;}
+.gzvotetopbox .voteresult { width:876px; height:359px; position: relative;}
+.gzvotetopbox .resultbox, .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
+	border-radius: 5px;	background: #111; color: #FFF; z-index:999;
+	opacity: 0.9;	-moz-opacity: 0.9;	filter:alpha(opacity=90);
+}
+.gzvotetopbox .loading { line-height:106px;text-align:center; }
+.gzvotetopbox .resultbox .resulinfo { display: block;  font-size: 22px; line-height:22px; width:111px; text-align: center; font-weight:bold;}
+.gzvotetopbox .resultbox .title { padding: 20px 0 0; }
+.gzvotetopbox .resultbox .left , .resultbox .right { float: left; padding: 20px 0 0;}
+.gzvotetopbox .resultbox .right { }
+.gzvotetopbox .resultbox .winner { }
+.gzvotetopbox .note { color: #fff100; }
+.gzvotetopbox .blur { }
+.gzvotetopbox .mark {  display:none; background: #ddd;width:433px; height:214px; position: absolute; z-index:9; pointer-events: none; top:0px; }
+.gzvotetopbox .notfuct { -webkit-filter: contrast(30%);-webkit-filter: blur(2px); -webkit-filter: sepia();}
+.gzvotetopbox .notfuct .mark { display:block; opacity: 0.6;	-moz-opacity: 0.6;	filter:alpha(opacity=60); border-radius: 5px;
+	background:-webkit-gradient(linear,left top,left bottom,from(#DDDDDD),to(#efefef));
+	background:-moz-linear-gradient(center bottom,#DDDDDD,#efefef);
+}
