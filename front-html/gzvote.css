@@ -30,7 +30,7 @@ a { outline:none; text-decoration:none;  }
 /*==gz wp vote==*/
 body { padding:20px 0;}
 .hide { display: none;}
-.gzvotebox { margin: 0 auto; width:930px; height:460px; 
+.gzvotebox { margin: 0 auto; width:930px; height:460px;  margin-bottom: 60px;
 	box-shadow: -3px -3px 10px 2px rgba(0,0,0,.3) inset,
 	0 0 0 1px rgba(0,0,0,.5),
 	2px 2px 10px rgba(0,0,0,.6);
@@ -53,14 +53,14 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);
 .gzvotebox .itemname { font-size:25px; line-height:60px; color:#fff; padding-left:20px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
 .gzvotebox .voteitem .style01 { border-radius: 5px; width:433px; height:214px;}
 .gzvotebox .voteresult { width:876px; height:359px; position: relative;}
-.gzvotebox .resultbox, .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
+.gzvotebox .resultbox, .gzvotebox .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
 	border-radius: 5px;	background: #111; color: #FFF; z-index:999;
 	opacity: 0.9;	-moz-opacity: 0.9;	filter:alpha(opacity=90);
 }
 .gzvotebox .loading { line-height:106px;text-align:center; }
 .gzvotebox .resultbox .resulinfo { display: block;  font-size: 22px; line-height:22px; width:111px; text-align: center; font-weight:bold;}
 .gzvotebox .resultbox .title { padding: 20px 0 0; }
-.gzvotebox .resultbox .left , .resultbox .right { float: left; padding: 20px 0 0;}
+.gzvotebox .resultbox .left , .gzvotebox .resultbox .right { float: left; padding: 20px 0 0;}
 .gzvotebox .resultbox .right { }
 .gzvotebox .resultbox .winner { }
 .gzvotebox .note { color: #fff100; }
@@ -72,42 +72,41 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);
 	background:-moz-linear-gradient(center bottom,#DDDDDD,#efefef);
 }
 
-.gzvotetopbox { margin: 0 auto; width:930px; height:460px; 
-	box-shadow: -3px -3px 10px 2px rgba(0,0,0,.3) inset,
+.gzvotetopbox { margin: 0 auto; width:460px; height:230px; margin-bottom: 20px;
+	box-shadow: -3px -3px 5px 2px rgba(0,0,0,.3) inset,
 	0 0 0 1px rgba(0,0,0,.5),
 	2px 2px 10px rgba(0,0,0,.6);
 	border-radius: 5px;
 	position:relative; 
 	background:url(gzvote-bg.jpg) center 0 ;
  }
-.gzvotetopbox .postvotebox { padding: 0 25px; position: relative;width:870px; height:460px; color:#fff;}
-.gzvotetopbox .postvotebox .votemark { width:100%; position: absolute; top:28px; font-size:46px; line-height:46px; padding-left:8px; font-weight:bold; }
-.gzvotetopbox .postvotebox .votedate { position: absolute; right:20px; top:55px; font-size:22px;line-height:22px; width:200px; text-align:right;}
-.gzvotetopbox .postvotebox .votetitle { position: absolute;  top:110px; font-size:22px; line-height:48px; padding-left:14px; text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
-.gzvotetopbox .postvotebox .votenav { position: absolute; width:208px; height:40px; border-radius: 0 0 8px 8px; background:#fff100; top:-1px; right:14px; text-align:right; 
-line-height:40px; font-size:24px; padding-right:10px;
-box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+.gzvotetopbox .postvotebox { padding: 0 12px; position: relative;width:430px; height:230px; color:#fff;}
+.gzvotetopbox .postvotebox .votemark { width:100%; position: absolute; top:14px; font-size:23px; line-height:23px; padding-left:4px; font-weight:bold; }
+.gzvotetopbox .postvotebox .votedate { position: absolute; right:10px; top:27px; font-size:11px;line-height:11px; width:100px; text-align:right;}
+.gzvotetopbox .postvotebox .votetitle { position: absolute;  top:47px; font-size:12px; line-height:24px; padding-left:7px; text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotetopbox .postvotebox .votenav { position: absolute; width:104px; height:20px; border-radius: 0 0 8px 8px; background:#fff100; top:0; right:7px; text-align:right; 
+	line-height:20px; font-size:12px; padding-right:5px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,.4);
 }
-.gzvotetopbox .postvotebox .votebody { clear: both; position: absolute; width:900px; height:300px; top:160px;  }
-.gzvotetopbox .voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px; position: relative;}
-.gzvotetopbox .voteitem + .gzvotebox .voteitem { margin: 0;}
-.gzvotetopbox .voteitem a { width:433px; height:260px; display: block;}
-.gzvotetopbox .itemname { font-size:25px; line-height:60px; color:#fff; padding-left:20px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
-.gzvotetopbox .voteitem .style01 { border-radius: 5px; width:433px; height:214px;}
-.gzvotetopbox .voteresult { width:876px; height:359px; position: relative;}
-.gzvotetopbox .resultbox, .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
-	border-radius: 5px;	background: #111; color: #FFF; z-index:999;
+.gzvotetopbox .postvotebox .votebody { clear: both; position: absolute; width:450px; height:150px; top:80px;  }
+.gzvotetopbox .voteitem { width:217px; height:130px; display: block; float: left; margin-right: 5px; position: relative;}
+.gzvotetopbox .voteitem + .gzvotetopbox .voteitem { margin: 0;}
+.gzvotetopbox .voteitem a { width:217px; height:130px; display: block;}
+.gzvotetopbox .itemname { font-size:13px; line-height:30px; color:#fff; padding-left:10px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotetopbox .voteitem .style01 { border-radius: 5px; width:217px; height:107px;}
+.gzvotetopbox .voteresult { width:438px; height:230px; position: relative;}
+.gzvotetopbox .resultbox, .gzvotetopbox .loading { width:111px; height:53px; position: absolute; top:18px; left:163px; border-radius: 5px;	background: #111; color: #FFF; z-index:999;
 	opacity: 0.9;	-moz-opacity: 0.9;	filter:alpha(opacity=90);
 }
-.gzvotetopbox .loading { line-height:106px;text-align:center; }
-.gzvotetopbox .resultbox .resulinfo { display: block;  font-size: 22px; line-height:22px; width:111px; text-align: center; font-weight:bold;}
-.gzvotetopbox .resultbox .title { padding: 20px 0 0; }
-.gzvotetopbox .resultbox .left , .resultbox .right { float: left; padding: 20px 0 0;}
+.gzvotetopbox .loading { line-height:53px;text-align:center; }
+.gzvotetopbox .resultbox .resulinfo { display: block;  font-size: 12px; line-height:12px; width:55px; text-align: center; font-weight:bold;}
+.gzvotetopbox .resultbox .title { padding: 10px 0 0; }
+.gzvotetopbox .resultbox .left , .gzvotetopbox .resultbox .right { float: left; padding: 10px 0 0;}
 .gzvotetopbox .resultbox .right { }
 .gzvotetopbox .resultbox .winner { }
 .gzvotetopbox .note { color: #fff100; }
 .gzvotetopbox .blur { }
-.gzvotetopbox .mark {  display:none; background: #ddd;width:433px; height:214px; position: absolute; z-index:9; pointer-events: none; top:0px; }
+.gzvotetopbox .mark {  display:none; background: #ddd;width:217px; height:107px; position: absolute; z-index:9; pointer-events: none; top:0px; }
 .gzvotetopbox .notfuct { -webkit-filter: contrast(30%);-webkit-filter: blur(2px); -webkit-filter: sepia();}
 .gzvotetopbox .notfuct .mark { display:block; opacity: 0.6;	-moz-opacity: 0.6;	filter:alpha(opacity=60); border-radius: 5px;
 	background:-webkit-gradient(linear,left top,left bottom,from(#DDDDDD),to(#efefef));

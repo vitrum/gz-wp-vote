@@ -24,8 +24,8 @@ if (!JSON) {
 var eventtimes = null
 , url = 'vote.json' ;
 //post vote
-function postVote(voteInfo) {
-	$(".voteresult").show();
+function postVote(voteInfo,$this) {
+	$this.parents(".votebody").find(".voteresult").show();
 	var postdate = voteInfo;
 	var request = jQuery.ajax({
 	  type: "POST",
@@ -35,8 +35,8 @@ function postVote(voteInfo) {
 	request.done(function(msg) {
 		var eventtimes = null;
 		eventtimes = setTimeout(function(){
-			$(".loading").hide();
-			$(".resultbox").show();
+			$this.parents(".votebody").find(".loading").hide();
+			$this.parents(".votebody").find(".resultbox").show();
 		},300);
 	});
 }
@@ -45,18 +45,31 @@ function postVote(voteInfo) {
  /* BUTTON PUBLIC CLASS DEFINITION
   * ============================== */
 	$(".voteitem a").live('click', function() {
-		var linkInfo = $(this).attr("data-ref");
+		var linkInfo = $(this).attr("data-ref")
+		,$this = $(this);
 		if (linkInfo !== ""){
-			postVote(linkInfo);
+			postVote(linkInfo,$this);
 		}
 	});
 	$(".voteitem a").live('hover', function() {
 		var linkInfo = $(this).attr("data-ref")
 		,$this = $(this)
 		,$linkItem = $this.parents(".voteitem")
-		,$allItem = $(".voteitem");
-		$linkItem.addClass("blue");
-		$allItem.addClass("notfuct");
-		$linkItem.removeClass("notfuct");
+		//,$allItem = $(".voteitem");
+		, $allItem = $this.parents(".votebody").find(".voteitem");
+		var eventtimes = null;
+		eventtimes = setTimeout(function(){
+			$linkItem.addClass("blue");
+			$allItem.addClass("notfuct");
+			$linkItem.removeClass("notfuct");
+		},40);
+	});
+	$(".votebody").live('mouseout', function() {
+		var $this = $(this);
+		var eventtimes = null;
+		eventtimes = setTimeout(function(){
+			//$this.find(".notfuct").removeClass("notfuct");
+			//$this.find(".blue").removeClass("blue");
+		},20);
 	});
 }( window.jQuery );
