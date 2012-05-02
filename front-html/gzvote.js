@@ -24,6 +24,7 @@
 	$(".voteitem a").live('click', function() {
 		//alert("show statues!");
 		$(".voteresult").show();
+		$(".resultbox").show();
 	});
 
 	
