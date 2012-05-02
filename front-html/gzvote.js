@@ -21,11 +21,28 @@
 
  /* BUTTON PUBLIC CLASS DEFINITION
   * ============================== */
+
 	$(".voteitem a").live('click', function() {
 		//alert("show statues!");
 		$(".voteresult").show();
-		$(".resultbox").show();
-	});
+		eventtimes = setTimeout(function(){
+			$(".loading").hide();
+			$(".resultbox").show();
+		},500);
 
+	});
+	$(".voteitem a").live('hover', function() {
+		var linkInfo = $(this).attr("data-ref")
+		,$this = $(this)
+		,$linkItem = $this.parents(".voteitem")
+		,$allItem = $(".voteitem");
+		
+		$linkItem.addClass("blue");
+		$allItem.addClass("notfuct");
+		$linkItem.removeClass("notfuct");
+		/*$allMarkItem.show();
+		$thisMarkItem.hide();*/
+		
+	});
 	
 }( window.jQuery );

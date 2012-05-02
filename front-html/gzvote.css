@@ -1,6 +1,6 @@
 * {}
 html { width:100%; margin:0; padding:0; border:0;}
-body { background:#fff; font-size:12px; font: 12px/14px \5FAE\8F6F\96C5\9ED1,\5B8B\4F53,"Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; width:100%;   position:relative; }
+body { background:#123; font-size:12px; font: 12px/14px \5FAE\8F6F\96C5\9ED1,\5B8B\4F53,"Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; width:100%;   position:relative; }
 /*== reset font ==*/
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin:0; padding:0; }
 table { border-collapse:collapse; border-spacing:0; }
@@ -40,27 +40,38 @@ body { padding:20px 0;}
  }
 .postvotebox { padding: 0 25px; position: relative;width:870px; height:460px; color:#fff;}
 .postvotebox .votemark { width:100%; position: absolute; top:28px; font-size:46px; line-height:46px; padding-left:8px; font-weight:bold; }
-.postvotebox .votedate { position: absolute; right:20px; top:65px; font-size:22px;line-height:22px; width:200px; text-align:right;}
-.postvotebox .votetitle { position: absolute; font-weight:bold; top:110px; font-size:22px; line-height:48px; padding-left:14px; }
-.postvotebox .votenav { position: absolute; width:208px; height:40px; border-radius: 0 0 8px 8px; background:#fff100; top:-1px; right:14px; text-align:right; line-height:40px; font-size:24px; padding-right:10px}
-
+.postvotebox .votedate { position: absolute; right:20px; top:55px; font-size:22px;line-height:22px; width:200px; text-align:right;}
+.postvotebox .votetitle { position: absolute;  top:110px; font-size:22px; line-height:48px; padding-left:14px; text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.postvotebox .votenav { position: absolute; width:208px; height:40px; border-radius: 0 0 8px 8px; background:#fff100; top:-1px; right:14px; text-align:right; 
+line-height:40px; font-size:24px; padding-right:10px;
+box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+}
 .postvotebox .votebody { clear: both; position: absolute; width:900px; height:300px; top:160px;  }
-.voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px;}
+.voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px; position: relative;}
 .voteitem + .voteitem { margin: 0;}
-.itemname { font-size:25px; line-height:60px; color:#fff;font-weight:bold; padding-left:20px;}
+.voteitem a { width:433px; height:260px; display: block;}
+.itemname { font-size:25px; line-height:60px; color:#fff; padding-left:20px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
 .voteitem .style01 { border-radius: 5px; width:433px; height:214px;}
+
+
 .voteresult { width:876px; height:359px; position: relative;}
-.resultbox { width:222px; height:106px; position: absolute; top:35px; left:327px;
+.resultbox, .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
 	border-radius: 5px;
 	background: #111;
 	opacity: 0.9;
 	-moz-opacity: 0.9;
 	filter:alpha(opacity=90);
 	color: #FFF;
+	z-index:999;
 }
+.loading { line-height:106px;text-align:center; }
 .resultbox .resulinfo { display: block;  font-size: 22px; line-height:22px; width:111px; text-align: center; font-weight:bold;}
 .resultbox .title { padding: 20px 0 0; }
 .resultbox .left , .resultbox .right { float: left; padding: 20px 0 0;}
 .resultbox .right { }
 .resultbox .winner { }
 .note { color: #fff100; }
+.blur {}
+.mark {  display:none; background: #ddd;width:433px; height:214px; position: absolute; z-index:9; pointer-events: none; top:0px;}
+.notfuct { 	-webkit-filter: contrast(30%);-webkit-filter: blur(2px); -webkit-filter: sepia();}
+.notfuct .mark { display:block; opacity: 0.6;	-moz-opacity: 0.6;	filter:alpha(opacity=60); border-radius: 5px;}
