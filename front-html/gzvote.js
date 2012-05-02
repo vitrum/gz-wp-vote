@@ -16,7 +16,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================== */
- 
 //set up API
 var JSON;
 if (!JSON) {
@@ -24,11 +23,9 @@ if (!JSON) {
 }
 var eventtimes = null
 , url = 'vote.json' ;
-
 //post vote
 function postVote(voteInfo) {
 	$(".voteresult").show();
-	
 	var postdate = voteInfo;
 	var request = jQuery.ajax({
 	  type: "POST",
@@ -42,9 +39,7 @@ function postVote(voteInfo) {
 			$(".resultbox").show();
 		},300);
 	});
-
 }
-
 //main fuction
 !function( $ ) {
  /* BUTTON PUBLIC CLASS DEFINITION
