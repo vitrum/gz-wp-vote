@@ -50,6 +50,7 @@ function postVote(voteInfo,$this) {
 		if (linkInfo !== ""){
 			postVote(linkInfo,$this);
 		}
+		return false;
 	});
 	$(".voteitem a").live('hover', function() {
 		var linkInfo = $(this).attr("data-ref")
