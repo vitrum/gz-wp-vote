@@ -52,19 +52,28 @@ function postVote(voteInfo,$this) {
 		}
 		return false;
 	});
-	$(".voteitem a").live('hover', function() {
-		var linkInfo = $(this).attr("data-ref")
+	$(".voteitem img").live('hover', function() {
+		var linkInfo = $(this).parents("a").attr("data-ref")
 		,$this = $(this)
 		,$linkItem = $this.parents(".voteitem")
 		//,$allItem = $(".voteitem");
 		, $allItem = $this.parents(".votebody").find(".voteitem");
-		var eventtimes = null;
-		eventtimes = setTimeout(function(){
+		//var eventtimes = null;
+		//eventtimes = setTimeout(function(){
 			$linkItem.addClass("blue");
 			$allItem.addClass("notfuct");
 			$linkItem.removeClass("notfuct");
-		},40);
+		//},40);
 	});
+	$(".voteitem img").live('mouseout', function() {
+		var $this = $(this)
+		,$linkItem = $this.parents(".voteitem")
+		//,$allItem = $(".voteitem");
+		, $allItem = $this.parents(".votebody").find(".voteitem");
+
+		$allItem.removeClass("notfuct");
+		$linkItem.removeClass("notfuct").removeClass("blue");
+	});	
 	$(".votebody").live('mouseout', function() {
 		var $this = $(this);
 		var eventtimes = null;
