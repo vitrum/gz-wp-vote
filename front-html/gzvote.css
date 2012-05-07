@@ -42,7 +42,7 @@ body { padding:20px 0;}
 .gzvotebox .postvotebox { padding: 0 25px; position: relative;width:870px; height:460px; color:#fff;}
 .gzvotebox .postvotebox .votemark { width:100%; position: absolute; top:28px; font-size:46px; line-height:46px; padding-left:8px; font-weight:bold; }
 .gzvotebox .postvotebox .votedate { position: absolute; right:20px; top:55px; font-size:22px;line-height:22px; width:200px; text-align:right;}
-.gzvotebox .postvotebox .votetitle { position: absolute;  top:110px; font-size:22px; line-height:48px; padding-left:14px; text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotebox .postvotebox .votetitle { position: absolute;  top:110px; font-size:22px; line-height:48px; padding-left:14px; /*text-shadow: 2px 2px 5px rgba(0,0,0,.8);*/}
 .gzvotebox .postvotebox .votenav { position: absolute; width:218px; height:40px; 
 	background:url(gzvote-bg.png) -140px -116px ;top:-1px; right:14px; text-align:right; 
 line-height:40px; font-size:24px; padding-right:10px;background-size: auto;
@@ -55,7 +55,7 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 .gzvotebox .voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px; position: relative;}
 .gzvotebox .voteitem + .gzvotebox .voteitem { margin: 0;}
 .gzvotebox .voteitem a { width:433px; height:260px; display: block;}
-.gzvotebox .itemname { font-size:25px; line-height:60px; color:#fff; padding-left:20px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotebox .itemname { font-size:25px; line-height:60px; color:#fff; padding-left:20px;/*text-shadow: 2px 2px 5px rgba(0,0,0,.8);*/}
 .gzvotebox .voteitem .style01 { border-radius: 5px; width:433px; height:214px;}
 .gzvotebox .voteresult { width:876px; height:359px; position: relative;}
 .gzvotebox .resultbox, .gzvotebox .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
@@ -89,7 +89,7 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 .gzvotetopbox .postvotebox { padding: 0 12px; position: relative;width:430px; height:230px; color:#fff;}
 .gzvotetopbox .postvotebox .votemark { width:100%; position: absolute; top:14px; font-size:23px; line-height:23px; padding-left:4px; font-weight:bold; }
 .gzvotetopbox .postvotebox .votedate { position: absolute; right:10px; top:27px; font-size:11px;line-height:11px; width:100px; text-align:right;}
-.gzvotetopbox .postvotebox .votetitle { position: absolute;  top:47px; font-size:12px; line-height:24px; padding-left:7px; text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotetopbox .postvotebox .votetitle { position: absolute;  top:47px; font-size:12px; line-height:24px; padding-left:7px; /*text-shadow: 2px 2px 5px rgba(0,0,0,.8);*/}
 .gzvotetopbox .postvotebox .votenav { position: absolute; width:108px; height:20px; 
 	background:url(gzvote-bg.png) -140px -114px ; background-size: auto; top:-1px; right:14px; text-align:right;line-height:20px; font-size:12px; padding-right:10px; 
 	/*border-radius: 0 0 8px 8px; background:#fff100;  
@@ -101,7 +101,7 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 .gzvotetopbox .voteitem { width:217px; height:130px; display: block; float: left; margin-right: 5px; position: relative;}
 .gzvotetopbox .voteitem + .gzvotetopbox .voteitem { margin: 0;}
 .gzvotetopbox .voteitem a { width:217px; height:130px; display: block;}
-.gzvotetopbox .itemname { font-size:13px; line-height:30px; color:#fff; padding-left:10px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
+.gzvotetopbox .itemname { font-size:13px; line-height:30px; color:#fff; padding-left:10px;/*text-shadow: 2px 2px 5px rgba(0,0,0,.8);*/}
 .gzvotetopbox .voteitem .style01 { border-radius: 5px; width:217px; height:107px;}
 .gzvotetopbox .voteresult { width:438px; height:230px; position: relative;}
 .gzvotetopbox .resultbox, .gzvotetopbox .loading { width:111px; height:53px; position: absolute; top:18px; left:163px; border-radius: 5px;	background:url(gzvote-bg.png) -368px -746px ; color: #FFF; z-index:999;
