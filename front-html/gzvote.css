@@ -52,11 +52,11 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 .gzvotebox .postvotebox .votenav a { text-indent: -9999px; display: block; text-align:left;}
 .gzvotebox .postvotebox .votenavold { background:url(gzvote-bg.png) -138px 0 ;}
 .gzvotebox .postvotebox .votebody { clear: both; position: absolute; width:900px; height:300px; top:160px;  }
-.gzvotebox .voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px; position: relative;}
+.gzvotebox .voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px; position: relative; cursor: pointer;}
 .gzvotebox .voteitem + .gzvotebox .voteitem { margin: 0;}
 .gzvotebox .voteitem a { width:433px; height:260px; display: block;}
 .gzvotebox .itemname { font-size:25px; line-height:60px; color:#fff; padding-left:20px;/*text-shadow: 2px 2px 5px rgba(0,0,0,.8);*/}
-.gzvotebox .voteitem .style01 { border-radius: 5px; width:433px; height:214px;}
+.gzvotebox .voteitem .style01 { border-radius: 5px; width:433px; height:214px; }
 .gzvotebox .voteresult { width:876px; height:359px; position: relative;}
 .gzvotebox .resultbox, .gzvotebox .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
 	border-radius: 5px;	background:url(gzvote-bg.png) -358px -746px ; color: #FFF; z-index:999;
@@ -98,7 +98,7 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 .gzvotetopbox .postvotebox .votenav a { text-indent: -9999px; display: block; text-align:left;}
 .gzvotetopbox .postvotebox .votenavold { background:url(gzvote-bg.png) -138px 0 ;}
 .gzvotetopbox .postvotebox .votebody { clear: both; position: absolute; width:450px; height:150px; top:80px;  }
-.gzvotetopbox .voteitem { width:217px; height:130px; display: block; float: left; margin-right: 5px; position: relative;}
+.gzvotetopbox .voteitem { width:217px; height:130px; display: block; float: left; margin-right: 5px; position: relative;cursor: pointer;}
 .gzvotetopbox .voteitem + .gzvotetopbox .voteitem { margin: 0;}
 .gzvotetopbox .voteitem a { width:217px; height:130px; display: block;}
 .gzvotetopbox .itemname { font-size:13px; line-height:30px; color:#fff; padding-left:10px;/*text-shadow: 2px 2px 5px rgba(0,0,0,.8);*/}
