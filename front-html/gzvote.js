@@ -41,10 +41,10 @@ function postVote(voteInfo,$this) {
 	});
 }
 //main fuction
-!function( $ ) {
- /* BUTTON PUBLIC CLASS DEFINITION
+jQuery(document).ready(function() { 
+/* BUTTON PUBLIC CLASS DEFINITION
   * ============================== */
-	$(".voteitem a").live('click', function() {
+	$(".voteitem a").on('click', function() {
 		var linkInfo = $(this).attr("data-ref")
 		,$this = $(this);
 		if (linkInfo !== ""){
@@ -52,19 +52,38 @@ function postVote(voteInfo,$this) {
 		}
 		return false;
 	});
+	$(".voteitem img").on({
+		hover: function(){
+			var linkInfo = $(this).parents("a").attr("data-ref")
+			,$this = $(this)
+			,$linkItem = $this.parents(".voteitem")
+			, $allItem = $this.parents(".votebody").find(".voteitem");
+			
+			$linkItem.addClass("blue");
+			$allItem.addClass("notfuct");
+			$linkItem.removeClass("notfuct");
+		},
+		mouseleave: function(){
+			var $this = $(this)
+			,$linkItem = $this.parents(".voteitem")
+			, $allItem = $this.parents(".votebody").find(".voteitem");
+
+			$allItem.removeClass("notfuct");
+		  }
+		});
+	/*
 	$(".voteitem img").live('hover', function() {
 		var linkInfo = $(this).parents("a").attr("data-ref")
 		,$this = $(this)
 		,$linkItem = $this.parents(".voteitem")
-		//,$allItem = $(".voteitem");
 		, $allItem = $this.parents(".votebody").find(".voteitem");
-		//var eventtimes = null;
-		//eventtimes = setTimeout(function(){
-			$linkItem.addClass("blue");
-			$allItem.addClass("notfuct");
-			$linkItem.removeClass("notfuct");
-		//},40);
-	}).live('mouseout', function() {
+		
+		$linkItem.addClass("blue");
+		$allItem.addClass("notfuct");
+		$linkItem.removeClass("notfuct");
+
+	});
+	$(".voteitem img").live('mouseout', function() {
 		var $this = $(this)
 		,$linkItem = $this.parents(".voteitem")
 		//,$allItem = $(".voteitem");
@@ -73,12 +92,7 @@ function postVote(voteInfo,$this) {
 		$allItem.removeClass("notfuct");
 		$linkItem.removeClass("notfuct").removeClass("blue");
 	});	
-	$(".votebody").live('mouseout', function() {
-		var $this = $(this);
-		var eventtimes = null;
-		eventtimes = setTimeout(function(){
-			//$this.find(".notfuct").removeClass("notfuct");
-			//$this.find(".blue").removeClass("blue");
-		},20);
-	});
-}( window.jQuery );
+*/
+
+
+});

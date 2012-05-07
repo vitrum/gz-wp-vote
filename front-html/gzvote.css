@@ -127,10 +127,10 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);
 -ms-transform: scale(0.66); /* for IE */
 
 -o-transform: scale(0.66); /* for Opera */}
-.transform2-1 {-webkit-transform: scale(2); /* for Chrome || Safari */
+.transform2-1 {-webkit-transform: scale(0.8); /* for Chrome || Safari */
 
--moz-transform: scale(2); /* for Firefox */
+-moz-transform: scale(0.8); /* for Firefox */
 
--ms-transform: scale(2); /* for IE */
+-ms-transform: scale(0.8); /* for IE */
 
--o-transform: scale(2); /* for Opera */}
+-o-transform: scale(0.8); /* for Opera */}

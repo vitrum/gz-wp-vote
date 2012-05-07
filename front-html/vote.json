@@ -1,11 +1,10 @@
 {
 "result":"0",
 "message":"post successfully",
-"totalCount":"45",
-"expireTime":"3600",
+"voteId":"1",
 "itemList":
 [
-{"itemId":"2209","brand":"NINE WEST","category":"女装女鞋","categoryLabel":"NINE WEST","startTime":"1335488400","endTime":"1336093200"},
-{"itemId":"1585","brand":"KESSLORD","category":"新款女包","categoryLabel":"KESSLORD","startTime":"1333760400","endTime":"1336179600"}
+{"itemId":"1","name":"高帅富","imgurl":"1.jpg","point":"70%"},
+{"itemId":"2","name":"矮穷丑","imgurl":"2.jpg","point":"30%"}
 ]
 }
