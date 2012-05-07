@@ -59,7 +59,7 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 .gzvotebox .voteitem .style01 { border-radius: 5px; width:433px; height:214px;}
 .gzvotebox .voteresult { width:876px; height:359px; position: relative;}
 .gzvotebox .resultbox, .gzvotebox .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
-	border-radius: 5px;	background: #111; color: #FFF; z-index:999;
+	border-radius: 5px;	background:url(gzvote-bg.png) -358px -746px ; color: #FFF; z-index:999;
 	opacity: 0.9;	-moz-opacity: 0.9;	filter:alpha(opacity=90);
 }
 .gzvotebox .loading { line-height:106px;text-align:center; }
@@ -104,7 +104,7 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 .gzvotetopbox .itemname { font-size:13px; line-height:30px; color:#fff; padding-left:10px;text-shadow: 2px 2px 5px rgba(0,0,0,.8);}
 .gzvotetopbox .voteitem .style01 { border-radius: 5px; width:217px; height:107px;}
 .gzvotetopbox .voteresult { width:438px; height:230px; position: relative;}
-.gzvotetopbox .resultbox, .gzvotetopbox .loading { width:111px; height:53px; position: absolute; top:18px; left:163px; border-radius: 5px;	background: #111; color: #FFF; z-index:999;
+.gzvotetopbox .resultbox, .gzvotetopbox .loading { width:111px; height:53px; position: absolute; top:18px; left:163px; border-radius: 5px;	background:url(gzvote-bg.png) -368px -746px ; color: #FFF; z-index:999;
 	opacity: 0.9;	-moz-opacity: 0.9;	filter:alpha(opacity=90);
 }
 .gzvotetopbox .loading { line-height:53px;text-align:center; }
