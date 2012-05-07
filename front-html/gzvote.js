@@ -28,7 +28,7 @@ function postVote(voteInfo,$this) {
 	$this.parents(".votebody").find(".voteresult").show();
 	var postdate = voteInfo;
 	var request = jQuery.ajax({
-	  type: "POST",
+	  type: "GET",
 	  url: url,
 	  data: postdate
 	});
@@ -64,8 +64,7 @@ function postVote(voteInfo,$this) {
 			$allItem.addClass("notfuct");
 			$linkItem.removeClass("notfuct");
 		//},40);
-	});
-	$(".voteitem img").live('mouseout', function() {
+	}).live('mouseout', function() {
 		var $this = $(this)
 		,$linkItem = $this.parents(".voteitem")
 		//,$allItem = $(".voteitem");
