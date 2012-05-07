@@ -41,7 +41,9 @@ function postVote(voteInfo,$this) {
 	});
 }
 //main fuction
-jQuery(document).ready(function() { 
+(function( $ ){
+
+  $.fn.gzVote = function() { 
 /* BUTTON PUBLIC CLASS DEFINITION
   * ============================== */
 	$(".voteitem a").on('click', function() {
@@ -94,5 +96,5 @@ jQuery(document).ready(function() {
 	});	
 */
 
-
-});
+  };
+})( jQuery );
