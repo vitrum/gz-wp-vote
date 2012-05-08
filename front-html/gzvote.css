@@ -37,7 +37,7 @@ body { padding:20px 0;}
 	border-radius: 5px;
 	position:relative; 
 	background:url(gzvote-bg.png) -22px -225px ;
-	background-size: auto;
+	background-size: auto auto;
  }
 .gzvotebox .postvotebox { padding: 0 25px; position: relative;width:870px; height:460px; color:#fff;}
 .gzvotebox .postvotebox .votemark { width:100%; position: absolute; top:28px; font-size:46px; line-height:46px; padding-left:8px; font-weight:bold; }

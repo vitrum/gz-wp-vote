@@ -43,7 +43,7 @@ function postVote(voteInfo,$this) {
 //main fuction
 (function( $ ){
 
-  $.fn.gzVote = function() { 
+$.fn.gzVote = function() { 
 /* BUTTON PUBLIC CLASS DEFINITION
   * ============================== */
 	$(".voteitem a").on('click', function() {
@@ -94,7 +94,7 @@ function postVote(voteInfo,$this) {
 		$allItem.removeClass("notfuct");
 		$linkItem.removeClass("notfuct").removeClass("blue");
 	});	
-*/
-
-  };
+	*/
+	};
+  
 })( jQuery );
