@@ -36,7 +36,7 @@ body { padding:20px 0;}
 	2px 2px 10px rgba(0,0,0,.6);*/
 	border-radius: 5px;
 	position:relative; 
-	background:url(gzvote-bg.png) -22px -225px ;
+	background:url(gzvote-bg2.png) -22px -225px ;
 	background-size: auto auto;
  }
 .gzvotebox .postvotebox { padding: 0 25px; position: relative;width:870px; height:460px; color:#fff;}
@@ -44,13 +44,13 @@ body { padding:20px 0;}
 .gzvotebox .postvotebox .votedate { position: absolute; right:20px; top:55px; font-size:22px;line-height:22px; width:200px; text-align:right;}
 .gzvotebox .postvotebox .votetitle { position: absolute;  top:110px; font-size:22px; line-height:48px; padding-left:14px; /*text-shadow: 2px 2px 5px rgba(0,0,0,.8);*/}
 .gzvotebox .postvotebox .votenav { position: absolute; width:218px; height:40px; 
-	background:url(gzvote-bg.png) -140px -116px ;top:-1px; right:14px; text-align:right; 
+	background:url(gzvote-bg2.png) -140px -116px ;top:-1px; right:14px; text-align:right; 
 line-height:40px; font-size:24px; padding-right:10px;background-size: auto;
 	/*border-radius: 0 0 8px 8px; background:#fff100; 
 box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 }
 .gzvotebox .postvotebox .votenav a { text-indent: -9999px; display: block; text-align:left;}
-.gzvotebox .postvotebox .votenavold { background:url(gzvote-bg.png) -138px 0 ;}
+.gzvotebox .postvotebox .votenavold { background:url(gzvote-bg2.png) -138px 0 ;}
 .gzvotebox .postvotebox .votebody { clear: both; position: absolute; width:900px; height:300px; top:160px;  }
 .gzvotebox .voteitem { width:433px; height:260px; display: block; float: left; margin-right: 10px; position: relative; cursor: pointer;}
 .gzvotebox .voteitem + .gzvotebox .voteitem { margin: 0;}
@@ -59,7 +59,7 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 .gzvotebox .voteitem .style01 { border-radius: 5px; width:433px; height:214px; }
 .gzvotebox .voteresult { width:876px; height:359px; position: relative;}
 .gzvotebox .resultbox, .gzvotebox .loading { width:222px; height:106px; position: absolute; top:35px; left:327px;
-	border-radius: 5px;	background:url(gzvote-bg.png) -358px -746px ; color: #FFF; z-index:999;
+	border-radius: 5px;	background:url(gzvote-bg2.png) -358px -746px ; color: #FFF; z-index:999;
 	opacity: 0.9;	-moz-opacity: 0.9;	filter:alpha(opacity=90);
 }
 .gzvotebox .loading { line-height:106px;text-align:center; }
@@ -83,7 +83,7 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 	2px 2px 10px rgba(0,0,0,.6);
 	border-radius: 5px;
 	position:relative; 
-	background:url(gzvote-bg.png) -22px -225px ;
+	background:url(gzvote-bg2.png) -22px -225px ;
 	background-size: auto;
  }
 .gzvotetopbox .postvotebox { padding: 0 12px; position: relative;width:430px; height:230px; color:#fff;}
@@ -91,12 +91,12 @@ box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 .gzvotetopbox .postvotebox .votedate { position: absolute; right:10px; top:27px; font-size:11px;line-height:11px; width:100px; text-align:right;}
 .gzvotetopbox .postvotebox .votetitle { position: absolute;  top:47px; font-size:12px; line-height:24px; padding-left:7px; /*text-shadow: 2px 2px 5px rgba(0,0,0,.8);*/}
 .gzvotetopbox .postvotebox .votenav { position: absolute; width:108px; height:20px; 
-	background:url(gzvote-bg.png) -140px -114px ; background-size: auto; top:-1px; right:14px; text-align:right;line-height:20px; font-size:12px; padding-right:10px; 
+	background:url(gzvote-bg2.png) -140px -114px ; background-size: auto; top:-1px; right:14px; text-align:right;line-height:20px; font-size:12px; padding-right:10px; 
 	/*border-radius: 0 0 8px 8px; background:#fff100;  
 box-shadow: 2px 2px 5px rgba(0,0,0,.4);*/
 }
 .gzvotetopbox .postvotebox .votenav a { text-indent: -9999px; display: block; text-align:left;}
-.gzvotetopbox .postvotebox .votenavold { background:url(gzvote-bg.png) -138px 0 ;}
+.gzvotetopbox .postvotebox .votenavold { background:url(gzvote-bg2.png) -138px 0 ;}
 .gzvotetopbox .postvotebox .votebody { clear: both; position: absolute; width:450px; height:150px; top:80px;  }
 .gzvotetopbox .voteitem { width:217px; height:130px; display: block; float: left; margin-right: 5px; position: relative;cursor: pointer;}
 .gzvotetopbox .voteitem + .gzvotetopbox .voteitem { margin: 0;}

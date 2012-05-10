@@ -28,7 +28,7 @@ function postVote(voteInfo,$this) {
 	$this.parents(".votebody").find(".voteresult").show();
 	var postdate = voteInfo;
 	var request = jQuery.ajax({
-	  type: "GET",
+	  type: "POST",
 	  url: url,
 	  data: postdate
 	});
@@ -40,12 +40,46 @@ function postVote(voteInfo,$this) {
 		},300);
 	});
 }
+//show vote
+function showVote(voteId) {
+	var postdate = "vote=" + voteId ;
+	alert("beforeSend! " + postdate);
+	var request = jQuery.ajax({
+	  type: "POST",
+	  url: url,
+	  data: postdate,
+	  beforeSend: function (  ) {
+    	alert("beforeSend!");
+  	  }
+	});
+	request.done(function(msg) {
+		JSON = eval('(' + msg + ')');
+		apitxt = msg;
+		var eventtimes = null;
+
+					 var tempjson = JSON['itemList']
+						,html = "";
+					  jQuery.each(tempjson,function(){
+							//alert(this.category + "," + this.imgUrl + "," + this.discount);
+				    	html= html + '<li class="brandlink"><div class="hover" style="display: none;"><a href="#">&nbsp;</a></div><dl class="infobox"> <dt><a href="#" class="category" data-ref="'+ this.categoryId +'"><img width="300" alt="'+ this.category +'" src="'+ this.imgUrl +'"></a></dt><dd class=""><a href="#" class="category" data-ref="'+ this.categoryId +'"><span class="date">'+ this.endTime +'</span><span class="name">'+ this.category +'</span><span class="glsprice">'+ this.discount +'</span></a></dd></dl></li>'
+						});
+					  jQuery('.homebrandbox .brand').html(html);
+
+		
+		eventtimes = setTimeout(function(){
+
+		},300);
+	});
+}
+
 //main fuction
 (function( $ ){
 
-$.fn.gzVote = function() { 
+$.fn.gzVote = function(voteId) { 
 /* BUTTON PUBLIC CLASS DEFINITION
   * ============================== */
+
+  	showVote(voteId);
 	$(".voteitem a").on('click', function() {
 		var linkInfo = $(this).attr("data-ref")
 		,$this = $(this);
