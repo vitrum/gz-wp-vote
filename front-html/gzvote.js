@@ -41,31 +41,35 @@ function postVote(voteInfo,$this) {
 	});
 }
 //show vote
-function showVote(voteId) {
+function showVote(voteId,$this) {
 	var postdate = "vote=" + voteId ;
-	alert("beforeSend! " + postdate);
 	var request = jQuery.ajax({
 	  type: "POST",
 	  url: url,
 	  data: postdate,
 	  beforeSend: function (  ) {
-    	alert("beforeSend!");
+    	//alert("beforeSend! " + postdate);
+    	//show loading;
+    	var html = '<div class="postvotebox"><div class="votebody"><ul></ul><div class="voteresult"><div class="loading">loading...</div></div><div class="clearfix"></div></div></div>';
+    	jQuery('.gzvotebox').html(html);
   	  }
 	});
 	request.done(function(msg) {
-		JSON = eval('(' + msg + ')');
+		//JSON = eval('(' + msg + ')');
+		JSON = msg;
 		apitxt = msg;
 		var eventtimes = null;
 
 					 var tempjson = JSON['itemList']
 						,html = "";
 					  jQuery.each(tempjson,function(){
-							//alert(this.category + "," + this.imgUrl + "," + this.discount);
-				    	html= html + '<li class="brandlink"><div class="hover" style="display: none;"><a href="#">&nbsp;</a></div><dl class="infobox"> <dt><a href="#" class="category" data-ref="'+ this.categoryId +'"><img width="300" alt="'+ this.category +'" src="'+ this.imgUrl +'"></a></dt><dd class=""><a href="#" class="category" data-ref="'+ this.categoryId +'"><span class="date">'+ this.endTime +'</span><span class="name">'+ this.category +'</span><span class="glsprice">'+ this.discount +'</span></a></dd></dl></li>'
+							alert(this.itemId + "," + this.name + "," + this.imgurl);
+				    		//html= html + '<li class="brandlink"><div class="hover" style="display: none;"><a href="#">&nbsp;</a></div><dl class="infobox"> <dt><a href="#" class="category" data-ref="'+ this.categoryId +'"><img width="300" alt="'+ this.category +'" src="'+ this.imgUrl +'"></a></dt><dd class=""><a href="#" class="category" data-ref="'+ this.categoryId +'"><span class="date">'+ this.endTime +'</span><span class="name">'+ this.category +'</span><span class="glsprice">'+ this.discount +'</span></a></dd></dl></li>'
+				    		html = html + this.itemId;
 						});
 					  jQuery('.homebrandbox .brand').html(html);
 
-		
+
 		eventtimes = setTimeout(function(){
 
 		},300);
