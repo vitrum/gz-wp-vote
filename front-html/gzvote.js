@@ -69,8 +69,8 @@ function showVote(voteId,$this) {
 	  data: postdate,
 	  beforeSend: function (  ) {
     	//show loading;
-    	var html = '<div class="postvotebox"><span class="votedate"></span><h4 class="votetitle"></h4><div class="votenav"><a href="" class="votelink">本期结果</a></div><div class="votebody"><ul></ul><div class="voteresult"><div class="loading">loading...</div><div class="resultbox hide"><span class="resulinfo title">结果</span><span class="resulinfo left note"></span><span class="resulinfo right note"></span></div></div><div class="clearfix"></div></div></div>';
-    	jQuery('.gzvotebox').html(html);
+    	var html = '<div class="gzvotebox"><div class="postvotebox"><span class="votedate"></span><h4 class="votetitle"></h4><div class="votenav"><a href="" class="votelink">本期结果</a></div><div class="votebody"><ul></ul><div class="voteresult"><div class="loading">loading...</div><div class="resultbox hide"><span class="resulinfo title">结果</span><span class="resulinfo left note"></span><span class="resulinfo right note"></span></div></div><div class="clearfix"></div></div></div></div>';
+    	jQuery('body').append(html);
   	  }
 	});
 	request.done(function(msg) {
