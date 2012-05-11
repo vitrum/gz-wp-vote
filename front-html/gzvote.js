@@ -23,6 +23,12 @@ if (!JSON) {
 }
 var eventtimes = null
 , url = 'vote.json' ;
+ url = 'http://ray.wordpress.local/wp-content/plugins/live-polls/polls-ajax.php?id=2&do=vote&answer_id=3';
+
+/*
+ * {"question_id":"2","question":"\u60a8\u6700\u559c\u6b22\u7684\u64cd\u4f5c\u7cfb\u7edf\u662f\u54ea\u4e00\u4e2a\uff1f","status":"closed","answers":[{"id":"3","text":"\u5fae\u8f6fWindows\u89c6\u7a97444","image_url":"http:\/\/ray.wordpress.local\/wp-content\/uploads\/2012\/05\/avatar.jpg","rate":"100.00%"},{"id":"4","text":"\u82f9\u679cMac OS X444","image_url":"http:\/\/ray.wordpress.local\/wp-content\/uploads\/2012\/05\/Brazil.gif","rate":"0.00%"}]}
+ * 
+ * */
 //post vote
 function postVote(voteInfo,$this) {
 	$this.parents(".votebody").find(".voteresult").show();
@@ -42,7 +48,7 @@ function postVote(voteInfo,$this) {
 }
 //show vote
 function showVote(voteId,$this) {
-	var postdate = "vote=" + voteId ;
+	var postdate = "id=" + voteId ;
 	var request = jQuery.ajax({
 	  type: "POST",
 	  url: url,
@@ -60,14 +66,14 @@ function showVote(voteId,$this) {
 		apitxt = msg;
 		var eventtimes = null;
 
-					 var tempjson = JSON['itemList']
-						,html = "";
-					  jQuery.each(tempjson,function(){
-							alert(this.itemId + "," + this.name + "," + this.imgurl);
-				    		//html= html + '<li class="brandlink"><div class="hover" style="display: none;"><a href="#">&nbsp;</a></div><dl class="infobox"> <dt><a href="#" class="category" data-ref="'+ this.categoryId +'"><img width="300" alt="'+ this.category +'" src="'+ this.imgUrl +'"></a></dt><dd class=""><a href="#" class="category" data-ref="'+ this.categoryId +'"><span class="date">'+ this.endTime +'</span><span class="name">'+ this.category +'</span><span class="glsprice">'+ this.discount +'</span></a></dd></dl></li>'
-				    		html = html + this.itemId;
-						});
-					  jQuery('.homebrandbox .brand').html(html);
+		var tempjson = JSON['itemList']
+		,html = "";
+		jQuery.each(tempjson,function(){
+			alert(this.itemId + "," + this.name + "," + this.imgurl);
+			//html= html + '<li class="brandlink"><div class="hover" style="display: none;"><a href="#">&nbsp;</a></div><dl class="infobox"> <dt><a href="#" class="category" data-ref="'+ this.categoryId +'"><img width="300" alt="'+ this.category +'" src="'+ this.imgUrl +'"></a></dt><dd class=""><a href="#" class="category" data-ref="'+ this.categoryId +'"><span class="date">'+ this.endTime +'</span><span class="name">'+ this.category +'</span><span class="glsprice">'+ this.discount +'</span></a></dd></dl></li>'
+			html = html + this.itemId;
+		});
+		jQuery('.homebrandbox .brand').html(html);
 
 
 		eventtimes = setTimeout(function(){

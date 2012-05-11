@@ -1,10 +1,1 @@
-{
-"result":"0",
-"message":"post successfully",
-"voteId":"1",
-"itemList":
-[
-{"itemId":"1","name":"高帅富","imgurl":"1.jpg","point":"70%"},
-{"itemId":"2","name":"矮穷丑","imgurl":"2.jpg","point":"30%"}
-]
-}
+{"question_id":"2","question":"\u60a8\u6700\u559c\u6b22\u7684\u64cd\u4f5c\u7cfb\u7edf\u662f\u54ea\u4e00\u4e2a\uff1f","status":"closed","answers":[{"id":"3","text":"\u5fae\u8f6fWindows\u89c6\u7a97444","image_url":"http:\/\/ray.wordpress.local\/wp-content\/uploads\/2012\/05\/avatar.jpg","rate":"100.00%"},{"id":"4","text":"\u82f9\u679cMac OS X444","image_url":"http:\/\/ray.wordpress.local\/wp-content\/uploads\/2012\/05\/Brazil.gif","rate":"0.00%"}]}
