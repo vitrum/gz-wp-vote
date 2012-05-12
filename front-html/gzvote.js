@@ -69,7 +69,7 @@ function showVote(voteId,$this) {
 	  data: postdate,
 	  beforeSend: function (  ) {
     	//show loading;
-    	var html = '<div class="gzvotebox"><div class="postvotebox"><span class="votedate"></span><h4 class="votetitle"></h4><div class="votenav"><a href="" class="votelink">本期结果</a></div><div class="votebody"><ul></ul><div class="voteresult"><div class="loading">loading...</div><div class="resultbox hide"><span class="resulinfo title">结果</span><span class="resulinfo left note"></span><span class="resulinfo right note"></span></div></div><div class="clearfix"></div></div></div></div>';
+    	var html = '<div class="gzvotebox" id="zettavote'+ voteId +'"><div class="postvotebox"><span class="votedate"></span><h4 class="votetitle"></h4><div class="votenav"><a href="" class="votelink">本期结果</a></div><div class="votebody"><ul></ul><div class="voteresult"><div class="loading">loading...</div><div class="resultbox hide"><span class="resulinfo title">结果</span><span class="resulinfo left note"></span><span class="resulinfo right note"></span></div></div><div class="clearfix"></div></div></div></div>';
     	jQuery('body').append(html);
   	  }
 	});
@@ -88,15 +88,15 @@ function showVote(voteId,$this) {
 			resul = resul + '<span class="resulinfo '+ spanclassName +' note">'+ this.rate +'</span>';
 		});
 		eventtimes = setTimeout(function(){
-			jQuery('.postvotebox ul').html(html);
-			jQuery('.postvotebox .votetitle').html(JSON.question);
-			jQuery('.postvotebox .votedate').html(JSON.start_date);
+			jQuery('#zettavote'+ voteId +' .postvotebox ul').html(html);
+			jQuery('#zettavote'+ voteId +' .postvotebox .votetitle').html(JSON.question);
+			jQuery('#zettavote'+ voteId +' .postvotebox .votedate').html(JSON.start_date);
 			if ( JSON.status != "open"){
-				jQuery('.voteresult .resultbox').html(resul);
-				jQuery(".loading").hide();
-				jQuery(".resultbox").show();
+				jQuery('#zettavote'+ voteId +' .voteresult .resultbox').html(resul);
+				jQuery('#zettavote'+ voteId +' .loading').hide();
+				jQuery('#zettavote'+ voteId +' .resultbox').show();
 			} else {
-				jQuery('.voteresult').hide();
+				jQuery('#zettavote'+ voteId +' .voteresult').hide();
 			}
 		},300);
 	});
